@@ -1,7 +1,7 @@
 # your-app-name
 
 ## Description
-This starter repository simplifies the process of starting a NestJS project. It provides configurations in addition to what you get when you run on your terminal '`$ nest new app-name`' to create a new nestjs project.
+This starter repository simplifies the process of starting a NestJS project. It provides configurations in addition to what you get when you run on your terminal '`$ nest new your-new-app-name`' to create a new nestjs project or app.
 
 ## Toolings
 - <a href="https://docs.docker.com/compose/" target="_blank">Docker</a> version 20.10.17, build 100c701
