@@ -14,10 +14,18 @@ This starter repository simplifies the process of starting a NestJS project. It 
 
 - <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a><sup><small> for development </small></sup>
 
+## Environment Variables
+ - Create and set up a `.env` file using the sample in the `.env.example` file.
+```bash
+# Your database details might look like this
+DATABASE_URL=mongodb://your_username:your_password@mongodb:27017/your_db?authSource=admin
+MONGO_USERNAME=your_username
+MONGO_PASSWORD=your_password
+```
 ## Installation - without docker
-Create and set up a `.env` file using the sample in the `.env.example` file.
 
 ```bash
+# install dependencies
 $ yarn install
 ```
 
@@ -65,6 +73,13 @@ $ docker:prod:restart
 $ docker image rm <image-id or repository-name>
 ```
 
+## API Documentation
+- The API documentation is available at `http://<yourhost>:<your-port>/docs` when the application is running.
+  - For example, `http://localhost:3000/docs`
+  - If you used default configurations, the port is `9092`
+  - In local environment, the docs will be available at `http://localhost:9092/docs`
+- The API documentation is generated using `Swagger` and `OpenAPI` standards.
+
 ## Test
 
 ```bash
@@ -79,3 +94,16 @@ $ yarn run test:cov
 ```
 # Application Code Documentation
 [app-code-docs](app-docs.md)
+
+# Viewing your Database
+- You can view your database data using the `MongoDB Compass` or any other database viewer of your choice like `Robo 3T` or `Studio 3T`.
+## For local Studio 3T or other MongoDb GUI connection to your dockerized MongoDB, use:
+```bash
+# Connection String - use this in the connection string field
+mongodb://your_username:your_password@localhost:27017/?authSource=admin
+```
+## For your NestJS application inside Docker container, use:
+```bash
+# Connection String - use this in the env file
+mongodb://your_username:your_password@mongodb:27017/?authSource=admin
+```

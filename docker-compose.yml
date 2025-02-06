@@ -1,5 +1,16 @@
-version: '3.8'
 services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - nest-starter-network
 # development environment
   dev:
     container_name: nest-starter_dev_api
@@ -22,6 +33,8 @@ services:
     #   - .:/app
     #   - ./app/node_modules
     restart: unless-stopped
+    depends_on:
+      - mongodb
 
 # production environment
   prod:
@@ -44,6 +57,11 @@ services:
     #   - .:/app
     #   - ./app/node_modules
     restart: unless-stopped
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodb_data:
 
 networks:
   nest-starter-network:

@@ -1,5 +1,5 @@
 # Development environemnt
-FROM node:18-alpine3.16 AS development
+FROM node:22-alpine AS development
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ EXPOSE $PORT
 CMD ["npm", "run", "start:dev"]
 
 # Production environment
-FROM node:18-alpine3.16 AS production
+FROM node:22-alpine AS production
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
