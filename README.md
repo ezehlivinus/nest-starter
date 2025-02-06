@@ -4,9 +4,9 @@
 This starter repository simplifies the process of starting a NestJS project. It provides configurations in addition to what you get when you run on your terminal '`$ nest new your-new-app-name`' to create a new nestjs project or app.
 
 ## Toolings
-- <a href="https://docs.docker.com/compose/" target="_blank">Docker</a> version 20.10.17, build 100c701
-- <a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a> version v2.6.0 
-- <a href="http://nodejs.org" target="_blank">Node.js</a> version 18
+- <a href="https://docs.docker.com/compose/" target="_blank">Docker</a> version 27.2.1, build 100c701
+- <a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a> version v2.29.2 
+- <a href="http://nodejs.org" target="_blank">Node.js</a> version 22
 - <a href="https://docs.nestjs.com/" target="_blank">NestJS </a> ~ `'cli -- common -- core'` version 9.x.x
 - <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> version ^4.9.5 
 - <a href="https://yarnpkg.com/getting-started/install" target="_blank">Yarn </a> version 1.22.19
